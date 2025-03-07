@@ -62,7 +62,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: android-${{ matrix.ndk-version }}-${{ job.status }}
-          path:
-            - prebuilt/
-            - build.log
+          path: prebuilt/, build.log
           retention-days: 1
