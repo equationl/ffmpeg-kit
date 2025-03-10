@@ -69,6 +69,6 @@ jobs:
           name: android-${{ matrix.ndk-version }}-${{ job.status }}
           # In fact output path define at  ./script/function_android.sh called 'get_aar_directory()' , it may 'bundle-android-aar' or 'bundle-android-aar-lts'
           path: |
-            prebuilt/bundle-android-aar/
+            prebuilt/bundle-android*/
             build.log
           retention-days: 1
