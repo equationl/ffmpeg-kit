@@ -55,7 +55,7 @@ jobs:
           echo "ANDROID_NDK_ROOT=$PWD/.ndk/$(ls .ndk)" >> $GITHUB_ENV
       - name: run the build script
         # check https://github.com/arthenica/ffmpeg-kit/issues/556
-        run: ./android.sh --full --enable-gpl --disable-lib-gnutls --disable-arm-v7a-neon --disable-x86 --disable-x86-64
+        run: ./android.sh --full --enable-gpl --disable-lib-srt --disable-lib-openssl --disable-arm-v7a-neon --disable-x86 --disable-x86-64
       - name: print build logs
         if: ${{ always() }}
         run: cat build.log
